@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="mainPane" prefHeight="638.0" prefWidth="1080.0" style="-fx-background-color: #383E49;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="flightservice.BookingAppController">
+    <children>
+        <Pane layoutY="57.0" prefHeight="581.0" prefWidth="159.0" style="-fx-background-color: #2B2D34;">
+            <effect>
+                <DropShadow />
+            </effect>
+            <children>
+                <Label layoutX="22.0" layoutY="12.0" prefHeight="27.0" prefWidth="111.0" text="NAVIGATION" textFill="#ebebeb">
+                    <font>
+                        <Font name="Segoe UI Symbol" size="18.0" />
+                    </font>
+                </Label>
+                <Separator layoutY="44.0" prefHeight="2.0" prefWidth="159.0" />
+                <Pane fx:id="home" layoutY="60.0" prefHeight="45.0" prefWidth="159.0" style="-fx-background-color: #515C6B;">
+                    <children>
+                        <Pane prefHeight="45.0" prefWidth="3.0" style="-fx-background-color: white;" />
+                    </children>
+                    <effect>
+                        <DropShadow height="8.0" radius="2.25" width="3.0" />
+                    </effect>
+                </Pane>
+                <Pane fx:id="ticket" layoutY="115.0" prefHeight="45.0" prefWidth="159.0" style="-fx-background-color: #515C6B;" visible="false">
+                    <children>
+                        <Pane prefHeight="45.0" prefWidth="3.0" style="-fx-background-color: white;" />
+                    </children>
+                    <effect>
+                        <DropShadow height="5.5" radius="1.75" width="3.5" />
+                    </effect>
+                </Pane>
+                <Pane fx:id="flight" layoutY="169.0" prefHeight="45.0" prefWidth="159.0" style="-fx-background-color: #515C6B;" visible="false">
+                    <children>
+                        <Pane prefHeight="45.0" prefWidth="3.0" style="-fx-background-color: white;" />
+                    </children>
+                    <effect>
+                        <DropShadow height="5.5" radius="1.75" width="3.5" />
+                    </effect>
+                </Pane>
+                <Pane fx:id="costumer" layoutY="223.0" prefHeight="45.0" prefWidth="159.0" style="-fx-background-color: #515C6B;" visible="false">
+                    <children>
+                        <Pane prefHeight="45.0" prefWidth="3.0" style="-fx-background-color: white;" />
+                    </children>
+                    <effect>
+                        <DropShadow height="5.5" radius="1.75" width="3.5" />
+                    </effect>
+                </Pane>
+                <Label layoutX="3.0" layoutY="65.0" onMousePressed="#homeButton" prefHeight="40.0" prefWidth="159.0" text="         Home" textAlignment="RIGHT" textFill="#ebebeb">
+                    <font>
+                        <Font name="Segoe UI Symbol" size="17.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </Label>
+                <Label layoutX="3.0" layoutY="119.0" onMousePressed="#ticketButton" prefHeight="40.0" prefWidth="159.0" text="         Tickets" textFill="#ebebeb">
+                    <font>
+                        <Font name="Segoe UI Symbol" size="17.0" />
+                    </font>
+                </Label>
+                <Label layoutX="3.0" layoutY="173.0" onMousePressed="#flightButton" prefHeight="40.0" prefWidth="159.0" text="         Flight Details" textFill="#ebebeb">
+                    <font>
+                        <Font name="Segoe UI Symbol" size="17.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="1.0" layoutY="227.0" onMousePressed="#costumerButton" prefHeight="40.0" prefWidth="159.0" text="       Costumer Info" textFill="#ebebeb">
+                    <font>
+                        <Font name="Segoe UI Symbol" size="17.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="14.0" layoutY="70.0" mouseTransparent="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/home.png" />
+                    </image>
+                    <effect>
+                        <Glow />
+                    </effect>
+                </ImageView>
+                <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="14.0" layoutY="125.0" mouseTransparent="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/ticketA.png" />
+                    </image>
+                    <effect>
+                        <Glow />
+                    </effect>
+                </ImageView>
+                <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="14.0" layoutY="179.0" mouseTransparent="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/flight.png" />
+                    </image>
+                    <effect>
+                        <Glow />
+                    </effect>
+                </ImageView>
+                <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="14.0" layoutY="233.0" mouseTransparent="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/userA.png" />
+                    </image>
+                    <effect>
+                        <Glow />
+                    </effect>
+                </ImageView>
+                <JFXButton buttonType="RAISED" layoutX="34.0" layoutY="537.0" onAction="#logOut" prefHeight="30.0" prefWidth="91.0" style="-fx-background-color: #515C6B; -fx-background-radius: 10;" text="    Logout" textFill="#ebebeb" />
+                <ImageView fitHeight="20.0" fitWidth="26.0" layoutX="46.0" layoutY="542.0" mouseTransparent="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/logout.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Pane layoutY="1.0" prefHeight="55.0" prefWidth="1080.0" style="-fx-background-color: #2B2D34;">
+            <children>
+                <Label layoutX="75.0" layoutY="8.0" prefHeight="42.0" prefWidth="392.0" text="Light Airlines Reservation" textFill="LIGHTGRAY">
+                    <font>
+                        <Font name="Baskerville Old Face" size="37.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="55.0" fitWidth="64.0" layoutX="6.0" layoutY="1.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@images/portA.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="34.0" fitWidth="31.0" layoutX="938.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/admin.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="userName" layoutX="973.0" layoutY="14.0" prefHeight="33.0" prefWidth="91.0" text="Admin" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe Script" size="18.0" />
+                    </font>
+                </Label>
+            <Pane fx:id="testB" layoutX="483.0" layoutY="15.0" prefHeight="24.0" prefWidth="24.0" style="-fx-background-color: #968e8e;" visible="false" />
+            </children>
+            <effect>
+                <DropShadow />
+            </effect>
+        </Pane>
+        <Pane fx:id="homePane" layoutX="165.0" layoutY="62.0" prefHeight="573.0" prefWidth="915.0" style="-fx-background-color: #192632;" visible="false">
+            <children>
+                <ImageView fx:id="slider" fitHeight="534.0" fitWidth="913.0" layoutX="1.0" layoutY="20.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@images/imageC.jpg" />
+                    </image>
+                    <effect>
+                        <DropShadow height="5.5" radius="2.25" width="5.5" />
+                    </effect>
+                </ImageView>
+                <Label layoutX="600.0" layoutY="548.0" prefHeight="29.0" prefWidth="315.0" text="This Application Is For Management Purposes Only." textFill="#ddd0d0">
+                    <font>
+                        <Font name="Calibri" size="15.0" />
+                    </font>
+               <effect>
+                  <DropShadow color="#3c384d" />
+               </effect>
+                </Label>
+                <Label layoutX="35.0" layoutY="429.0" prefHeight="70.0" prefWidth="392.0" text="Light Airlines" textFill="#f8f8f8">
+                    <font>
+                        <Font name="Forte" size="59.0" />
+                    </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+                </Label>
+                <JFXButton buttonType="RAISED" layoutX="783.0" layoutY="5.0" onAction="#exit" prefHeight="30.0" prefWidth="91.0" style="-fx-background-color: #515C6B; -fx-background-radius: 10;" text="Exit" textFill="#ebebeb" />
+            <Label layoutX="48.0" layoutY="492.0" text="-Achieving Greatness" textFill="#f8f8f8">
+               <font>
+                  <Font name="Forte" size="23.0" />
+               </font>
+            </Label>
+            </children>
+            <effect>
+                <DropShadow />
+            </effect>
+        </Pane>
+        <Pane fx:id="ticketPane" layoutX="165.0" layoutY="62.0" prefHeight="577.0" prefWidth="915.0" style="-fx-background-color: #192632;">
+            <children>
+                <Separator layoutY="39.0" prefHeight="3.0" prefWidth="915.0" />
+                <Label layoutX="14.0" layoutY="7.0" prefHeight="27.0" prefWidth="182.0" text="TICKET RESERVATION" textFill="#c6c1c1">
+                    <font>
+                        <Font name="Segoe UI Symbol" size="18.0" />
+                    </font>
+                </Label>
+                <Pane focusTraversable="true" layoutX="563.0" layoutY="51.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="410.0" prefWidth="342.0" style="-fx-background-color: #25476C; -fx-background-radius: 5;">
+                    <children>
+                        <Label layoutX="11.0" prefHeight="35.0" prefWidth="149.0" text="Flight Details" textFill="WHITE">
+                            <font>
+                                <Font name="Calisto MT" size="22.0" />
+                            </font>
+                        </Label>
+                        <Separator layoutY="32.0" prefHeight="3.0" prefWidth="342.0" />
+                        <JFXRadioButton fx:id="economic" layoutX="17.0" layoutY="70.0" text="Economic" textFill="#c6c1c1">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="flightClass" />
+                            </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="business" layoutX="118.0" layoutY="70.0" text="Business" textFill="#c6c1c1" toggleGroup="$flightClass" />
+                        <JFXRadioButton fx:id="local" layoutX="17.0" layoutY="128.0" onAction="#local" text="Domestic" textFill="#c6c1c1">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="flightType" />
+                            </toggleGroup>
+                        </JFXRadioButton>
+                        <Label layoutX="14.0" layoutY="100.0" prefHeight="20.0" prefWidth="122.0" text="Flight Type" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Symbol" size="17.0" />
+                            </font>
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </Label>
+                        <JFXRadioButton fx:id="international" layoutX="118.0" layoutY="128.0" onAction="#international" text="International" textFill="#c6c1c1" toggleGroup="$flightType" />
+                        <Label layoutX="14.0" layoutY="43.0" prefHeight="20.0" prefWidth="122.0" text="Flight Class" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Symbol" size="17.0" />
+                            </font>
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </Label>
+                        <Label layoutX="16.0" layoutY="156.0" prefHeight="25.0" prefWidth="142.0" text="Flight Destination" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Symbol" size="17.0" />
+                            </font>
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </Label>
+                        <JFXComboBox fx:id="fromDestination" focusColor="WHITE" layoutX="16.0" layoutY="194.0" prefHeight="30.0" prefWidth="142.0" unFocusColor="WHITE" />
+                        <JFXComboBox fx:id="toDestination" focusColor="WHITE" labelFloat="true" layoutX="188.0" layoutY="194.0" prefHeight="30.0" prefWidth="142.0" unFocusColor="WHITE" />
+                        <Label fx:id="from" layoutX="16.0" layoutY="180.0" prefHeight="20.0" prefWidth="64.0" text="From" textFill="#c6c1c1" />
+                        <Label layoutX="185.0" layoutY="180.0" prefHeight="20.0" prefWidth="64.0" text="To" textFill="#c6c1c1" />
+                        <Label layoutX="16.0" layoutY="229.0" prefHeight="20.0" prefWidth="64.0" text="State" textFill="#c6c1c1" />
+                        <JFXComboBox fx:id="state" focusColor="WHITE" layoutX="16.0" layoutY="243.0" prefHeight="30.0" prefWidth="142.0" unFocusColor="WHITE" />
+                        <Text fill="RED" layoutX="14.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Note: Some Countries may not be available at this time. " wrappingWidth="315.0" />
+                  <JFXTextField editable="false" focusColor="#d4d6da" layoutX="14.0" layoutY="319.0" prefHeight="30.0" prefWidth="142.0" text="Seat Number" unFocusColor="WHITE" />
+                  <JFXTextField editable="false" focusColor="#d8dbe1" layoutX="185.0" layoutY="319.0" prefHeight="30.0" prefWidth="142.0" text="Date Of Flight" unFocusColor="WHITE" />
+                  <Text fill="RED" layoutX="17.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seat Number and Date Of Flight will be auto-generated." wrappingWidth="315.0" />
+                    </children>
+                </Pane>
+                <Pane layoutX="7.0" layoutY="51.0" prefHeight="410.0" prefWidth="549.0" style="-fx-background-color: #25476C; -fx-background-radius: 5;">
+                    <children>
+                        <Separator layoutY="32.0" prefHeight="3.0" prefWidth="549.0" />
+                        <Label layoutX="9.0" layoutY="3.0" prefHeight="27.0" prefWidth="182.0" text="Costumer Details" textFill="WHITE">
+                            <font>
+                                <Font name="Calisto MT" size="22.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="firstName" layoutX="9.0" layoutY="48.0" prefHeight="30.0" prefWidth="257.0" promptText="First Name" />
+                        <TextField fx:id="lastName" layoutX="278.0" layoutY="48.0" prefHeight="30.0" prefWidth="257.0" promptText="Last Name" />
+                        <TextField fx:id="email" layoutX="10.0" layoutY="156.0" prefHeight="30.0" prefWidth="257.0" promptText="Email" />
+                        <Label layoutX="9.0" layoutY="78.0" prefHeight="26.0" prefWidth="60.0" text="Gender" textFill="WHITE">
+                            <font>
+                                <Font name="Segoe UI Symbol" size="17.0" />
+                            </font>
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </Label>
+                        <JFXRadioButton layoutX="16.0" layoutY="104.0" prefHeight="20.0" prefWidth="60.0" text="Male" textFill="#c6c1c1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="genderSelection" />
+                     </toggleGroup>
+                        </JFXRadioButton>
+                        <JFXRadioButton layoutX="89.0" layoutY="104.0" text="Female" textFill="#c6c1c1" toggleGroup="$genderSelection" />
+                        <DatePicker layoutX="279.0" layoutY="156.0" prefHeight="30.0" prefWidth="257.0" promptText="Date Of Birth" />
+                        <Label layoutX="9.0" layoutY="125.0" prefHeight="26.0" prefWidth="159.0" text="Personal Information" textFill="WHITE">
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                            <font>
+                                <Font name="Segoe UI Symbol" size="17.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="phoneNumber" layoutX="10.0" layoutY="200.0" prefHeight="30.0" prefWidth="257.0" promptText="Phone" />
+                  <TextArea fx:id="address" layoutX="278.0" layoutY="200.0" prefHeight="55.0" prefWidth="257.0" promptText="Address" />
+                  <JFXCheckBox fx:id="family" contentDisplay="RIGHT" graphicTextGap="1.0" layoutX="9.0" layoutY="255.0" onAction="#familyOptional" text="Family( Optional )" textAlignment="RIGHT" textFill="WHITE" unCheckedColor="WHITE">
+                     <font>
+                        <Font name="Segoe UI Symbol" size="16.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </JFXCheckBox>
+                  <Pane fx:id="familyPane" disable="true" layoutX="16.0" layoutY="285.0" prefHeight="115.0" prefWidth="515.0" style="-fx-border-color: white; -fx-background-color: #25476C; -fx-border-radius: 5;">
+                     <children>
+                        <TextField layoutX="17.0" layoutY="14.0" prefHeight="30.0" prefWidth="217.0" promptText="Full Name" />
+                        <TextField layoutX="273.0" layoutY="14.0" prefHeight="30.0" prefWidth="217.0" promptText="Family Postion" />
+                     </children></Pane>
+                  <Label layoutX="279.0" layoutY="78.0" prefHeight="26.0" prefWidth="182.0" text="First travel experience??" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Symbol" size="17.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <JFXRadioButton layoutX="287.0" layoutY="104.0" text="Yes" textFill="#c6c1c1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="travelExperience" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton layoutX="347.0" layoutY="104.0" text="No" textFill="#c6c1c1" toggleGroup="$travelExperience" />
+                    </children>
+                </Pane>
+            <Pane layoutX="7.0" layoutY="468.0" prefHeight="102.0" prefWidth="898.0" style="-fx-background-radius: 5; -fx-background-color: #25476C;">
+               <children>
+                  <JFXTreeTableView fx:id="details" editable="true" layoutX="6.0" layoutY="5.0" maxHeight="70.0" prefHeight="70.0" prefWidth="878.0" showRoot="false" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-color: F3F3F3; -fx-border-radius: 5;">
+                     <columnResizePolicy>
+                        <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy></JFXTreeTableView>
+                  <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" graphicTextGap="0.0" layoutX="724.0" layoutY="66.0" prefHeight="24.0" prefWidth="142.0" style="-fx-background-color: #515C6B; -fx-background-radius: 10;" text="     Generate Ticket" textFill="#ebebeb" />
+                  <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="577.0" layoutY="66.0" prefHeight="24.0" prefWidth="129.0" style="-fx-background-color: #515C6B; -fx-background-radius: 10;" text="    Book Flight" textFill="#ebebeb" />
+                  <FontAwesomeIconView fill="#ebebeb" glyphName="CALENDAR_CHECK_ALT" layoutX="593.0" layoutY="88.0" mouseTransparent="true" size="19">
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </FontAwesomeIconView>
+                  <MaterialDesignIconView fill="#ebebeb" glyphName="UPLOAD" layoutX="732.0" layoutY="90.0" mouseTransparent="true" size="21" />
+               </children>
+            </Pane>
+            </children>
+        </Pane>
+        <Pane fx:id="flightPane" layoutX="165.0" layoutY="62.0" prefHeight="573.0" prefWidth="915.0" style="-fx-background-color: #192632;" visible="false">
+            <children>
+                <Separator layoutY="39.0" prefHeight="3.0" prefWidth="910.0" />
+                <Label layoutX="14.0" layoutY="7.0" prefHeight="27.0" prefWidth="182.0" text="FLIGHT INFORMATION" textFill="#ebebeb">
+                    <font>
+                        <Font name="Segoe UI Symbol" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane fx:id="costumerPane" layoutX="165.0" layoutY="62.0" prefHeight="573.0" prefWidth="915.0" style="-fx-background-color: #192632;" visible="false">
+            <children>
+                <Separator layoutY="39.0" prefHeight="3.0" prefWidth="910.0" />
+                <Label layoutX="14.0" layoutY="7.0" prefHeight="27.0" prefWidth="182.0" text="COSTUMER DETAILS" textFill="#ebebeb">
+                    <font>
+                        <Font name="Segoe UI Symbol" size="18.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <StackPane fx:id="pane" layoutX="438.0" layoutY="195.0" prefHeight="9.0" prefWidth="279.0" style="-fx-background-color: transparent;" />
+    </children>
+</AnchorPane>
